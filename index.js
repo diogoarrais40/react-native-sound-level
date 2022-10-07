@@ -34,7 +34,7 @@ var SoundLevel = {
     }
 
     // Monitoring interval not supported for Android yet. Feel free to add and do a pull request. :)
-    return Platform.OS === 'ios' ? SoundLevelModule.start(monitorInterval) : SoundLevelModule.start()
+    return Platform.OS !== 'desktop' ? SoundLevelModule.start(monitorInterval) : SoundLevelModule.start()
   },
 
   stop: function () {
